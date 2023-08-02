@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Results summary component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'hanken': ['Hanken Grotesk']
+        },
+        extend: {
+          colors: {
+            lightRed: 'hsl(0, 100%, 67%)',
+            orangeYellow: 'hsl(39, 100%, 56%)',
+            greenTeal: 'hsl(166, 100%, 37%)',
+            cobaltBlue: 'hsl(234, 85%, 45%)',
+            lightSlateBlue: 'hsl(252, 100%, 67%)',
+            lightRoyalBlue: 'hsl(241, 81%, 54%)',
+            white: 'hsl(0, 0%, 100%)',
+            paleBlue: 'hsl(221, 100%, 96%)',
+            ligthLavender: 'hsl(241, 100%, 89%)',
+            darkGreyBlue: 'hsl(224, 30%, 27%)',
+            violetBlue: 'hsla(256, 72%, 46%, 1)',
+            persianBlue: 'hsla(241, 72%, 46%, 0)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-hanken h-screen box-border lg:pt-56">
+  <!-- score -->
+  <div class="flex flex-col lg:flex-row lg:shadow-xl lg:rounded-3xl lg:w-[600px] lg:mx-auto lg:my-0">
+    <div class="bg-gradient-to-t from-lightRoyalBlue to-lightSlateBlue rounded-b-3xl flex flex-col items-center py-6 lg:w-1/2 lg:rounded-3xl lg:justify-between">
+      <h1 class="text-ligthLavender lg:text-lg">Your Result</h1>
+      <div class="bg-gradient-to-b from-violetBlue flex flex-col rounded-full px-8 py-7 my-4 items-center lg:px-12 lg:py-11">
+        <h1 class="text-white text-5xl font-bold lg:text-6xl">76</h1>
+        <p class="text-ligthLavender text-xs">of 100</p>
+      </div>
+      <h1 class="text-white text-xl mb-2 lg:text-2xl">Great</h1>
+      <p class="text-ligthLavender text-sm w-56 mb-3 lg:text-base text-center">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <!-- summary -->
+    <div class="p-5 lg:w-1/2 lg:p-7">
+      <h1 class="font-bold text-darkGreyBlue lg:text-lg">Summary</h1>
+      <div class="bg-red-50 flex justify-between px-3 py-4 rounded-lg text-sm my-4">
+        <div class="flex gap-2">
+          <img src="./assets/images/icon-reaction.svg" alt="">
+          <span class="text-lightRed font-bold">Reaction</span>
+        </div>
+        <div class="flex gap-2">
+          <h1 class="font-bold">80</h1>
+          <p class="opacity-50 font-bold"> / 100</p>
+        </div>
+      </div>
+      <div class="bg-yellow-50 flex justify-between px-3 py-4 rounded-lg text-sm my-4">
+        <div class="flex gap-2">
+          <img src="./assets/images/icon-memory.svg" alt="">
+          <span class="text-orangeYellow font-bold">Memory</span>
+        </div>
+        <div class="flex gap-2">
+          <h1 class="font-bold">92</h1>
+          <p class="opacity-50 font-bold"> / 100</p>
+        </div>
+      </div>
+      <div class="bg-green-50 flex justify-between px-3 py-4 rounded-lg text-sm my-4">
+        <div class="flex gap-2">
+          <img src="./assets/images/icon-verbal.svg" alt="">
+          <span class="text-greenTeal font-bold">Verbal</span>
+        </div>
+        <div class="flex gap-2">
+          <h1 class="font-bold">61</h1>
+          <p class="opacity-50 font-bold"> / 100</p>
+        </div>
+      </div>
+      <div class="bg-blue-50 flex justify-between px-3 py-4 rounded-lg text-sm my-4">
+        <div class="flex gap-2">
+          <img src="./assets/images/icon-visual.svg" alt="">
+          <span class="text-cobaltBlue font-bold">Visual</span>
+        </div>
+        <div class="flex gap-2">
+          <h1 class="font-bold">72</h1>
+          <p class="opacity-50 font-bold"> / 100</p>
+        </div>
+      </div>
+      <button class="bg-darkGreyBlue w-full rounded-full text-white py-3 active:bg-gradient-to-t from-lightRoyalBlue to-lightSlateBlue lg:hover:bg-gradient-to-t from-lightRoyalBlue to-lightSlateBlue lg:mt-4 lg:text-sm">Continue</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
